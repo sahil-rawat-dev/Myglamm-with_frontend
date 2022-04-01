@@ -1,4 +1,4 @@
-import { catagory,spotlight,launches,essentials,bekitcombo,kitcombo,afkitcombo,videoupperdata } from "../components/index.deta.js";
+import { catagory,spotlight,launches,essentials,bekitcombo,kitcombo,afkitcombo,offer,videoupperdata } from "../components/index.deta.js";
 import {appendimage,appenddata,showdata} from "./main.js";
 import data from "../deta/products.data.js";
 
@@ -18,6 +18,8 @@ catagory.forEach((el) => {
   appenddata(spotlight,location)
 
 //   append launches
+let location1=document.getElementById("offer")
+appenddata(offer,location1)
 
 let location2=document.getElementById("launches")
 appenddata(launches,location2)
@@ -35,6 +37,8 @@ appenddata(kitcombo,location5)
 
 let location6=document.getElementById("combos")
 appendimage(afkitcombo,location6)
+
+
 
 let bestseller = document.getElementById("product-parent");
 let bestsellerStart = 0;
