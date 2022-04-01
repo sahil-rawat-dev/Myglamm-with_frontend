@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2ea3bb9613.js" crossorigin="anonymous"></script> 
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        .bs-example {
+            margin: 20px;
+        }
+         
+        .modal-content iframe {
+            margin: 0 auto;
+            display: block;
+        }
+        .card {
+      height: 500px;
+      border: 1px solid rgb(226, 226, 226);
+      background-color: white;
+      word-wrap: none;
+    }
+    .card:hover {
+      box-shadow: 2px 2px 4px 4px rgb(214, 213, 213);
+      cursor: pointer;
+    }
+    .card img {
+      width: 100%;
+      border-bottom: 1px solid rgb(226, 226, 226);
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      margin: 0px 20px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .card p {
+      font-size: 20px;
+      text-align: left;
+      margin-left: 30px;
+    }
+    #price {
+      margin-top: 30px;
+    }
+    #MyG{
+        /* position: absolute; */
+        width: 100%;
+        margin-left:0px ;
+    }
+    #body1{
+        margin-top: 100px;
+    }
+    #imagesize{
+        width: 70px;
+    }
+    </style>
+    <style>
+        .modal-box{ font-family: 'Poppins', sans-serif; }
+ .show-modal{
+     color: #fff;
+     /* background: linear-gradient(to right, #33a3ff, #0675cf, #49a6fd); */
+     background:black;
+     font-size: 18px;
+     font-weight: 600;
+     text-transform: capitalize;
+     padding: 10px 15px;
+     /* margin: 200px auto 0; */
+     border: none;
+     outline: none;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+     display: block;
+     transition: all 0.3s ease 0s;
+ }
+ .description>img{
+     width:80%;
+ }
+ .show-modal:hover,
+ .show-modal:focus{
+     color: #fff;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+     outline: none;
+ }
+ .modal-dialog{
+     width: 400px;
+     margin: 70px auto 0;
+ }
+ .modal-dialog{ transform: scale(0.5); }
+ .modal-dialog{ transform: scale(1); }
+ .modal-dialog .modal-content{
+     text-align: center;
+     border: none;
+ }
+ .modal-content .close{
+     color: #fff;
+     /* background: linear-gradient(to right, #33a3ff, #0675cf, #4cd5ff); */
+     background:black;
+     font-size: 25px;
+     font-weight: 400;
+     text-shadow: none;
+     line-height: 27px;
+     height: 25px;
+     width: 25px;
+     border-radius: 50%;
+     overflow: hidden;
+     opacity: 1;
+     position: absolute;
+     left: auto;
+     right: 8px;
+     top: 8px;
+     z-index: 1;
+     transition: all 0.3s;
+ }
+ .modal-content .close:hover{
+     color: #fff;
+     box-shadow: 0 0 5px rgba(0,0,0,0.5);
+ }
+ .close:focus{ outline: none; }
+ .modal-body{ padding: 60px 40px 40px !important; }
+ .modal-body .title{
+     color: black;
+     font-size: 33px;
+     font-weight: 700;
+     letter-spacing: 1px;
+     margin: 0 0 10px;
+ }
+ .modal-body .description{
+     color: #9A9EA9;
+     font-size: 16px;
+     margin: 0 0 20px;
+ }
+ .modal-body .form-group{
+     text-align: left;
+     margin-bottom: 20px;
+     position: relative;
+ }
+ .modal-body .input-icon{
+     color: #777;
+     font-size: 18px;
+     transform: translateY(-50%);
+     position: absolute;
+     top: 50%;
+     left: 20px;
+ }
+ .modal-body .form-control{
+     font-size: 17px;
+     height: 45px;
+     width: 100%;
+     padding: 6px 0 6px 50px;
+     margin: 0 auto;
+     border: 2px solid #eee;
+     border-radius: 5px;
+     box-shadow: none;
+     outline: none;
+ }
+ .form-control::placeholder{
+     color: #AEAFB1;
+ }
+ .form-group.checkbox{
+     width: 130px;
+     margin-top: 0;
+     display: inline-block;
+ }
+ .form-group.checkbox label{
+     color: #9A9EA9;
+     font-weight: normal;
+ }
+ .form-group.checkbox input[type=checkbox]{
+     margin-left: 0;
+ }
+ .modal-body .forgot-pass{
+     color: #7F7FD5;
+     font-size: 13px;
+     text-align: right;
+     width: calc(100% - 135px);
+     margin: 2px 0;
+     display: inline-block;
+     vertical-align: top;
+     transition: all 0.3s ease 0s;
+ }
+ .forgot-pass:hover{
+     color: #9A9EA9;
+     text-decoration: underline;
+ }
+ .modal-content .modal-body .btn{
+     color: #fff;
+     background: black;
+     font-size: 16px;
+     font-weight: 500;
+     letter-spacing: 1px;
+     text-transform: uppercase;
+     line-height: 38px;
+     width: 100%;
+     height: 40px;
+     padding: 0;
+     border: none;
+     border-radius: 5px;
+     border: none;
+     display: inline-block;
+     transition: all 0.6s ease 0s;
+ }
+ .modal-content .modal-body .btn:hover{
+     color: #fff;
+     letter-spacing: 2px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+ }
+ .modal-content .modal-body .btn:focus{ outline: none; }
+ @media only screen and (max-width: 480px){
+     .modal-dialog{ width: 95% !important; }
+     .modal-content .modal-body{
+         padding: 60px 20px 40px !important;
+     }
+ }
+ 
+   </style>
+    <style>
+        /* width */
+            ::-webkit-scrollbar {
+            width: 7px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+            background: #888; 
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+            }
+        body{
+            background-color: rgb(244,244,244);
+            
+            /* overflow-y: hidden; */
+        }
+        #body1{
+            margin-top: 150px;
+        }
+        #bigimage{
+   width: 100%;
+    /* height: 300px; */
+    
+    
+    
+}
+#product-parent {
+        display: grid;
+        grid-template-columns: 23% 23% 23% 23%;
+        gap:4%;
+    }
+#bigimage>img{
+    width: 100%;
+    /* height: 300px; */
+    /* object-fit: contain; */
+
+}
+#smallgig,#refer{
+    width: 80%;
+    padding: 20px 0px 0px 20px;
+    margin: auto;
+    /* object-fit: contain; */
+
+
+}
+#refer>img{
+    width: 100%;
+}
+
+#smallgig>img{
+    width: 100%;
+    /* height: 300px; */
+}
+
+        .productbox {
+            width: 90%;
+            margin: 20px auto;
+            /* border: 1px solid red; */
+            padding: 2% 0px;
+            text-align: center;
+            }
+            .productbox h2 {
+            margin-bottom: 15px;
+            }
+            .productbox > img {
+            width: 100%;
+            }
+    #productbox-catagory{
+        display: grid;
+        
+        grid-template-columns: repeat(8,1fr);
+        margin: auto;
+    }
+    #productbox-catagory>div>img{
+        margin: 0px 10px 0px 10px;
+        border: 5px solid red;
+        border-radius: 50%;
+    }
+    .productbox h2 {
+    text-decoration: underline;
+    text-decoration-color: rgb(250,193,193) ;
+    text-decoration-thickness: 5px;
+    text-decoration-style:wavy
+    }
+    iframe {
+    width: 100%;
+    height: 500px;
+    display: block;
+    margin: auto;
+    }
+    #video{
+        width: 100%;
+        height: 500px;
+        
+    }
+
+    #bg-video{
+        width: 100%;
+    }
+    #spotligth,#launches,#essentials,#kit,#kitscombos{
+        
+        display: grid;
+        grid-template-columns: repeat(3,30%);
+        grid-gap: 3%;
+        
+
+    }
+    #combos{
+        display: grid;
+        grid-template-columns: repeat(2,45%);
+        grid-gap: 3%;
+    }
+    #fixed>img{
+        width: 100%;
+        position: static;
+        
+    }
+    #text{
+        margin-top: -85px;
+        height: 80px;
+        overflow: hidden;
+        background-color: white;
+        opacity: 0.7;
+        
+    }
+    #text:hover{
+        margin-top: -165px;
+        height: 160px;
+        background-color: white;
+        opacity: 0.7;
+        
+
+    }
+    #fixed>div>img,#combos>div>img{
+        width: 100%;
+    }
+    #essentials>div>img{
+        width: 100%;
+    }
+    #kit>div>img,#kitscombos>div>img{
+        width: 100%;
+    }
+    #videotext{
+        margin-top: 300px;
+        width: 60%;
+        margin: auto;
+        margin-top: -100px;
+        height: 500px;
+        color: red;
+        /* position: static; */
+    }
+    #video{
+        /* margin-top: -300px; */
+        width: 100%;
+        height: 500px;
+        
+    }
+    #video1{
+        position:-webkit-sticky;
+    }
+
+    #bg-video{
+        width: 100%;
+        
+    }
+    #product-parent {
+        display: grid;
+        grid-template-columns: 23% 23% 23% 23%;
+        gap:4%;
+    }
+    
+    /* #product-parent>div{
+        min-width: 228px;
+        border: 1px solid black;
+        margin: 0px 10px 0px 10px;
+    }
+    #product-parent>div>img{
+        width: 100%;
+        height: 100px;
+    } */
+
+
+
+
+    /* triel */
+    video {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        }
+        .video-wrapper {
+            margin-top: 50px;
+        border: 2px solid #000;
+        width: 100%;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .header{
+            width: 50%;
+        position: relative;
+        color: white;
+        text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+        }
+       
+
+            @media only screen and (min-width:321px) and (max-width:720px) {      
+                #bigimage{
+           width: 90%;
+            /* height: 300px; */
+            
+            
+            
+        }
+        #bigimage>img{
+            width: 100%;
+            height: 300px;
+            /* object-fit: contain; */
+
+        }
+        #smallgig{
+            width: 80%;
+            padding: 20px 0px 0px 20px;
+            margin: auto;
+            /* object-fit: contain; */
+
+
+        }
+        #smallgig>img{
+            width: 100%;
+            height: 300px;
+        }
+        .productbox {
+            width: 90%;
+            margin: 20px auto;
+            /* border: 1px solid red; */
+            padding: 2% 0px;
+            text-align: center;
+            }
+            #productbox-catagory{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                margin: auto;
+            }
+            #productbox-catagory>div>img{
+                margin: 0px 10px 0px 10px;
+                border: 5px solid red;
+                border-radius: 50%;
+            }
+            /* .productbox h2 {
+            margin-bottom: 15px;
+            }
+            .productbox > img {
+            width: 100%;
+            } */
+            iframe {
+            width: 100%;
+            height: 500px;
+            display: block;
+            margin: auto;
+            }
+            #video{
+                width: 100%;
+                height: 500px;
+                
+            }
+        
+            #bg-video{
+                width: 100%;
+            }
+            #spotligth,#launches,#essentials{
+                
+                display: grid;
+                grid-template-columns: repeat(3,30%);
+                grid-gap: 3%;
+                
+
+            }
+            #fixed>img{
+                width: 100%;
+                position: static;
+                
+            }
+            #text{
+                margin-top: -85px;
+                height: 80px;
+                overflow: hidden;
+                background-color: white;
+                opacity: 0.7;
+                
+            }
+            #text:hover{
+                margin-top: -165px;
+                height: 160px;
+                background-color: white;
+                opacity: 0.7;
+
+            }
+            #fixed>div>img{
+                width: 100%;
+            }
+            #essentials>div>img{
+                width: 100%;
+            }
+                  }
+            @media only screen and (min-width:0px) and (max-width:320px) {   
+                #bigimage{
+           width: 100%;
+            height: 300px;
+            
+            
+            
+        }
+        #bigimage>img{
+            width: 100%;
+            height: 300px;
+            /* object-fit: contain; */
+
+        }
+        #smallgig{
+            width: 90%;
+            padding: 20px 0px 0px 20px;
+            margin: auto;
+            /* object-fit: contain; */
+
+
+        }
+        #smallgig>img{
+            width: 100%;
+            height: 300px;
+        }
+        .productbox {
+            width: 90%;
+            margin: 20px auto;
+            /* border: 1px solid red; */
+            padding: 2% 0px;
+            text-align: center;
+            }
+            #productbox-catagory{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                margin: auto;
+            }
+            #productbox-catagory>div>img{
+                margin: 0px 10px 0px 10px;
+                border: 5px solid red;
+                border-radius: 50%;
+            }
+            .productbox h2 {
+            text-decoration: underline;
+            text-decoration-color: rgb(250,193,193) ;
+            }
+            /* .productbox > img {
+            width: 100%;
+            } */
+            iframe {
+            width: 100%;
+            height: 500px;
+            display: block;
+            margin: auto;
+            }
+            #video{
+                width: 100%;
+                height: 500px;
+                
+            }
+        
+            #bg-video{
+                width: 100%;
+            }
+            #spotligth,#launches,#essentials{
+                
+                display: grid;
+                grid-template-columns: repeat(3,30%);
+                grid-gap: 3%;
+                
+
+            }
+            #fixed>img{
+                width: 100%;
+                position: static;
+                
+            }
+            #text{
+                margin-top: -85px;
+                height: 80px;
+                overflow: hidden;
+                background-color: white;
+                opacity: 0.7;
+                
+            }
+            #text:hover{
+                margin-top: -165px;
+                height: 160px;
+                background-color: white;
+                opacity: 0.7;
+
+            }
+            #fixed>div>img{
+                width: 100%;
+            }
+            #essentials>div>img{
+                width: 100%;
+            }
+                }
+
+
+                #MyG{
+                    width: 100%;
+                    margin-left:-0px;
+                }
+                #far2{
+          background-color:transparent;
+          border:#ffffff;
+          color: black;
+      }
+      .btn{
+          background-color:transparent;
+          color:black;
+          margin-right:50px;
+          width:50px;
+          height:50px;
+         margin-top:-12px;
+         border:#ffffff;
+         box-shadow: none;
+      }
+
+      video {
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        }
+        .video-wrapper {
+            margin-top: 50px;
+        border: 2px solid #000;
+        width: 100%;
+        height: 600px;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+        .header{
+            width: 50%;
+        position: relative;
+        color: white;
+        text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+        }
+    </style>
+</head>
+<body>
+    <div id="MyG"></div>
+    <div id="parts"></div>
+
+    <div id="div2"></div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content clearfix">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <div class="modal-body">
+                    <h3 class="title">Login</h3>
+                    <div class="description">
+                        <img src="https://www.investindia.gov.in/themes/investindia/image/unicorns/2021/MyGlamm.png" alt="Myglamm">
+                    </div>
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fa fa-user"></i></span>
+                        <input type="email" class="form-control" placeholder="Enter Mobile No">
+                    </div>
+                    <div class="form-group">
+                        <span class="input-icon"><i class="fas fa-key"></i></span>
+                        <input type="password" class="form-control" placeholder="Enter OTP">
+                    </div>
+                    <div class="form-group checkbox">
+                        <input type="checkbox">
+                        <label>Remamber me</label>
+                    </div>
+                    <a href="signup.html" class="forgot-pass">Create account</a>
+                    <button class="btn">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="body1">
+        
+        <div id="bigimage"> <img src="https://files.myglamm.com/site-images/original/1920x527_11.gif" alt=""> </div>
+        <div class="productbox">
+            <h2>OFFER SEGMENTATION SLEEK BANNER</h2>
+            <!-- IN THE SPOTLIGHT DATA -->
+            <div id="offer"></div>
+        </div>
+        <div class="productbox">
+            <h2>IN THE SPOTLIGHT</h2>
+            <!-- IN THE SPOTLIGHT DATA -->
+            <div id="spotligth"></div>
+        </div>
+        <div id="smallgig"><img src="https://files.myglamm.com/site-images/original/1920-X-527_1.jpg" alt=""></div>
+        <div id="smallgig"><img src="https://files.myglamm.com/site-images/original/MGSleek-(Desktop)---2240x614-100.jpg" alt=""></div>
+
+        <!-- Latest glamm launch -->
+        <div class="productbox">
+            <h2>LATEST GLAMM LAUNCHE</h2>
+            <div id="launches"></div>
+        </div>
+        <div id="smallgig"><img src="https://files.myglamm.com/site-images/original/Sleek-D-2240-x-614.jpg" alt=""></div>
+        <!-- ESSENTIALS -->
+        <div class="productbox">
+            <h2>ESSENTIALS BUDGET BUYS</h2>
+            <div id="essentials"></div>
+        </div>
+        <div id="smallgig"><img src="https://files.myglamm.com/site-images/original/SF-Soap-2240-x-614.gif" alt=""></div>
+        <div id="smallgig"><img src="https://files.myglamm.com/site-images/original/Manish-Malhotra-Desktop-2240-x-614_2.jpg" alt=""></div>
+        <div class="productbox">
+            <h2>BESTSELLER</h2>
+            <div id="product-parent" class="products"></div>
+        </div>
+        <div id="smallgig"><img src="https://files.myglamm.com/site-images/original/Sleek-banner-Web.jpg" alt=""></div>
+        <div class="productbox">
+            <h2>SHOP BY CATAGORIES</h2>
+            <div id="productbox-catagory"></div>
+        </div>
+        <div id="bigimage"><img src="https://files.myglamm.com/site-images/original/Cacao-Launch-1920x527-desktop_1.gif" alt=""></div>
+        <div id="smallgig"><img src="https://files.myglamm.com/site-images/original/Simpl-Sleek-Banner-(Desktop)-2240-x-614-copy.jpg" alt=""></div>
+        <div class="productbox">
+            <div id="kit"></div>
+        </div>
+        <div class="productbox">
+            <h2>KITS & COMBOS</h2>
+            <div id="kitscombos"></div>
+        </div>
+        <div class="productbox">
+            <div id="combos"></div>
+        </div>
+        <div id="refer"><img src="https://files.myglamm.com/site-images/original/Community-Banner-2240-x-344_1.jpg" alt=""></div>
+        <div id="smallgig"><img src="https://files.myglamm.com/site-images/original/disclaimer-mgp_1.png" alt=""></div>
+            <!-- product price page -->
+      
+        <!-- <iframe src="https://www.myglamm.com/images/TellMyGlammWhatYouWant.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <footer id="footer2"></footer> -->
+        <div class="video-wrapper">
+            <video playsinline autoplay muted loop >
+              <source src="https://www.myglamm.com/images/TellMyGlammWhatYouWant.mp4" type="video/webm">
+              
+            </video>
+          
+            <div class="header" id="playvideo">
+                <h2>BRAND STORY</h2>
+                <p>Backed by one of Europe's largest natural beauty companies, MyGlamm collaborated with global experts and makeup artists to bring about exciting innovation in makeup to accomplish our single, focused goal – make looking glamorous effortless!</p>
+                
+                <a href="#Geeks2"
+               class="btn btn-lg"
+               data-toggle="modal"><img id="imagesize" src="https://www.myglamm.com/images/ico-play.png" alt=""></a>
+            </div>
+          </div>
+            
+           
+       
+        <!-- video -->
+        <div id="Geeks2" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button"
+                                class="close"
+                                data-dismiss="modal"
+                                aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body">
+                                <iframe id="Geeks3" src="https://www.youtube.com/embed/GdcxfyKNiDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                
+                    </div>
+                </div>
+            </div>
+      </div>
+
+        
+    </div>
+    <div id="footer"></div>
+   
+
+        
+</body>
+</html>
+<script type="module">
+    import {navbar} from "./components/navbar.js"
+   
+   let cont = document.getElementById("MyG")
+   cont.innerHTML = navbar();
+   </script>
+   <script src="nav.js"></script>
+
+<script type="module" src="./scripts/index.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

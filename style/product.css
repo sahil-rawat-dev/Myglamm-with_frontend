@@ -1,0 +1,47 @@
+
+#top{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 20px;
+    width:60%;
+}
+#top>div{
+    text-align: center;
+    border:1px solid grey;
+}
+#top>div>img{
+    width:80%;
+}
+#navcont{
+    position:fixed;
+}
+#container{
+    width:80%;
+    margin:auto;
+    margin-top:180px;
+}
+
+#cart1,#cartbtn{
+    padding:12px;
+    background:black;
+    color:white;
+}
+#cart1:hover{
+   
+    background:grey;
+    color:black;
+}
+#cartbtn:hover{
+    background:grey;
+    color:black;
+}
+#show{
+    margin-top: 150px;
+    width:35%;
+}
+#show>img{
+    width:100%;
+}
+#navcont{
+    margin-left:3.5%;
+}

@@ -1,0 +1,131 @@
+/* ---------------------------------------------------------bottom */
+#container{
+    width: 90%;
+    margin: auto;
+}
+#bottom{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.head{
+    
+    font-weight: bolde;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.input{
+    margin-top: 20px;
+    line-height: 40px;
+    width: 60%;
+    padding-left: 20px;
+    background-color: rgb(240, 240, 240);
+    font-size: 15px;
+     border: 1px solid;
+  
+}
+.button{
+    margin-top: 20px;
+    line-height: 40px;
+    width: 30%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 18px;
+    border: none;
+  
+}
+#three>#img_div{
+    width: 100%;
+    height: 100%;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.img{
+    width: 100%;
+    height: 40px;
+    cursor: pointer;
+}
+#one{
+    /* border: 1px solid green; */
+    /* width: 40%; */
+    padding: 10px;
+    flex: 3;
+}
+#two{
+    /* border: 1px solid orange; */
+   flex: 2.5;
+    height: 5%;
+    display: flex;
+    margin: 70px 0px 0px 0px;
+
+}
+#three{
+    /* border: 1px solid blue; */
+    /* width: 25%; */
+    flex: 2.4;
+    padding: 12px 0px 0px 0px;
+}
+#three>p{
+
+    font-size: 90%;
+    font-weight: normal;
+
+}
+a > img{
+    width: 11%;
+    margin: 2px;
+}
+#two > #text{
+  
+    flex: 4;
+    font-size: 85%;
+   
+}
+
+#text>p{
+   
+    padding-right: 2x;
+    border-right: 1px solid gray;
+}
+#two>#icon{
+    flex: 6;
+    padding: 9px 10px 0px 10px ;
+  
+}
+/* ----------------------------------------------------bottom 2 */
+
+#bottom_2{
+    width: 100%;
+    margin-top: 50px;
+   display: grid;
+   grid-template-columns: repeat(11,1fr);
+   justify-content: space-around;
+   grid-gap: 15px;
+   /* border: 1px solid; */
+}
+
+#bottom_2>div>h3{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: gray;
+    cursor: pointer;
+}
+
+#bottom_2>div>p{
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+#bottom_2>div>p:hover{
+    
+    color: rgb(183,141,78);
+    
+}
+
+

@@ -1,0 +1,59 @@
+#main{
+    display:flex;
+    margin-top:30px;
+}
+#main>div{
+    margin:5px;
+}
+#main>div>div:hover{
+    cursor: pointer;
+    color:goldenrod;
+}
+
+.had{
+    color:grey;
+    font-weight: bold;
+}
+#botmain{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+
+#mail{
+    display:flex;
+}
+#mail>input{
+    height:40px;
+}
+#mail>button{
+    background:black;
+    color:white;
+    height:45px;
+}
+#mail>button:hover{
+    cursor: pointer;
+}
+ #icon{
+    margin-top:-3%;
+} 
+@media only screen and (min-width:0px) and (max-width:320px) {
+ #main{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+ }
+ #botmain{
+     display: grid;
+     grid-template-columns: repeat(1,1fr);
+ }
+}
+@media only screen and (min-width:321px) and (max-width:720px) {
+    #main{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+    }
+    #botmain{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}

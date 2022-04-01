@@ -1,0 +1,276 @@
+
+
+/* ----------------------------------------------- */
+#navbar {
+    max-width: 100%;
+    height: 71px;
+    background-color: white;
+    box-shadow: 5px 3px 2px rgb(221, 220, 220);
+
+}
+
+#logo>img {
+    width: 150px;
+
+
+}
+
+#logo {
+    padding-top: 15px;
+    margin-left: 250px;
+}
+
+#subdiv {
+  
+  width: 90%;
+  display: grid;
+  grid-template-columns: 52% 47%;
+  grid-gap: 2%;
+  /* border: 1px solid green; */
+  margin: auto;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+#low{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+#low>hr{
+margin: 10px 0px 10px 0px;
+}
+
+#heading>p {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* -------------------------------- */
+
+#container{
+    /* border: 1px solid red; */
+  
+padding: 20px;
+  
+
+}
+#top{
+    font-size: 30px;
+}
+#one{
+    /* border: 1px solid red; */
+    margin: 10px;
+    display: flex;
+}
+input{
+    margin: 10px;
+    padding: 10px;
+    font-size: 12px;
+    border: none;
+    background-color: rgb(232,240,254);
+    color: grey;
+    outline-color: gray;
+}
+#name{
+    width: 30%;
+    border: none;
+    background-color: rgb(232,240,254);
+    color: grey;
+    outline-color: gray;
+}
+#two{
+    /* border: 1px solid blue; */
+    display: flex;
+    margin: 10px;
+}
+#two>input{
+    width: 20%;
+    border: none;
+    background-color: rgb(232,240,254);
+    color: grey;
+    outline-color: gray;
+}
+select{
+    width: 15%;
+    margin: 10px;
+    border: none;
+    background-color: rgb(232,240,254);
+    color: grey;
+    outline-color: gray;
+
+}
+
+#three{
+    /* border: 1px solid yellow; */
+    display: flex;
+    margin: 10px;
+}
+#three>input{
+    width: 20%;
+    border: none;
+    background-color: rgb(232,240,254);
+    color: grey;
+    outline-color: gray;
+}
+
+#four{
+    /* border: 1px solid orange; */
+    display: flex;
+        margin: 10px;
+        justify-content: flex-end;
+        padding-right: 10%;
+}
+#four>input{
+
+    margin-top: 18px;
+
+}
+
+
+/* ------------------------------------ */
+#bill {
+    background-color: #F5F5F5;
+    /* border: 1px solid red; */
+}
+
+
+#bill > div{
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid blue; */
+}
+#bill_heading {
+    margin-top: 16px;
+  
+    font-size: 30px;
+}
+
+#order_summary{
+    display: flex;
+    margin-top: 30px;
+    /* border: 1px solid rgb(119, 18, 35); */
+    margin: 5px;
+    /* text-align: center; */
+  
+    
+}
+
+ul{
+    list-style-type: none;
+}
+li{
+    margin-top: 14px;
+}
+#amount{
+    margin-left: 40%;
+}
+
+#promocode{
+    margin: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    /* border: 1px solid magenta; */
+}
+#promo_input{
+   
+    margin-left: 5px;
+    /* border: 1px solid brown; */
+}
+
+#final_amount{
+    margin-left: 50%;
+}
+#promo_input > button {
+   
+  
+   
+    border-radius: 3px;
+    border: none;
+    background-color: #757575;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 8px;
+    margin-top: 8px;
+    
+    
+}
+
+#proceed_payment{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#proceed_payment > button{
+    width: 100%;
+    padding: 15px 0;
+    font-size: 15px;
+    color:white ;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+
+
+
+#ip , #op
+{
+    height: 80%;
+    width: 100%;
+    padding-bottom: 1%;
+}
+
+#ip > input
+{
+    height: 100%;
+    width: 100%;
+    border: 2px solid black;
+    font-weight: bolder;
+    font-size: 11pt;
+    padding-left: 10px;
+    
+}
+
+
+#ip
+{
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 3.3%;
+}
+
+
+#op
+{
+    padding-top: 7%;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#five{
+    /* border: 1px solid green; */
+    margin: 10px;
+}
+
+#five>button{
+
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

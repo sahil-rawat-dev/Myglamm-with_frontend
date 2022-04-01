@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="./style/Payment.css">
+</head>
+<body>
+
+    <div id="top">
+        <div id="navbar">
+            <div id="logo">
+                <img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    
+<div id="bucket">
+
+
+    <div id="buckettop">
+            <h1>Payment</h1>
+
+    </div>
+
+    <div id="container">
+
+        <div id="box-left">
+             <div id="top"></div>
+             <div id="bottom">
+                 <h3>PAYMENT METHOD</h3>
+    
+                <div id="one">
+                
+                    <div id="img"><img src="https://img.icons8.com/external-flat-kendis-lasman/64/000000/external-credit-ecommerce-flat-kendis-lasman.png"/></div>
+        
+                     <div id="text"><p>Credit Or Debit card</p></div>
+        
+                </div>
+                <div id="two">
+                    <div id="img"><img src="https://img.icons8.com/ios/50/000000/mesh.png"/></div>
+                    <div id="text"><p>Net Banking</p></div>
+                </div>
+                <div id="three">
+                    <div id="img"><img src="https://img.icons8.com/ios-filled/50/000000/bhim-upi.png"/></div>
+                    <div id="text"><p>Google Pay / Phone Pay / UPI</p></div>
+                </div>
+                <div id="four">
+                    <div id="img"><img src="https://img.icons8.com/ios/50/000000/wallet--v1.png"/></div>
+                    <div id="text"><p>Wallet</p></div>
+                </div>
+                <div id="five">
+                    <div id="img"><img src="https://img.icons8.com/external-sbts2018-lineal-color-sbts2018/58/000000/external-cash-on-delivery-cyber-monday-sbts2018-lineal-color-sbts2018.png"/></div>
+                    <div id="text"><p>Cash On Delivery</p></div>
+                </div>
+    
+             </div>
+        </div>
+    
+        <!-- ------------------------------------- -->
+    
+        <div id="box-right">
+               
+            <div id="amount">
+    
+               <h2>AMOUNT PAYABLE</h2>
+               <h2 id="Payable_amount"></h2>
+    
+            </div>
+    
+            <h3 style="margin-left: 15px;">New Card</h3>
+    
+            <form id="card">
+               
+                <div class="one">
+    
+                   <p>Card Number</p>
+    
+                   <input type="number" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+    
+                </div>
+    
+                <div class="two">
+    
+                    <p>Cardholder’s Name</p>
+    
+                    <input type="text" placeholder="Ex - Vaibhav" required>
+    
+    
+                </div>
+    
+                <div class="three">
+                   
+                    <div id="valid">
+                      
+                       <p>Validity till</p>
+    
+                       <input type="text" placeholder="MM" id="month" required>
+    
+                       <input type="text" placeholder="YY" id="year" required>
+    
+    
+                    </div>
+    
+                     <div id="cvv">
+                           
+                        <p>CVV</p>
+    
+                         <input type="number" placeholder="***" required>
+    
+                     </div>
+
+                </div>
+
+                <div id="bottom">
+
+                    <button onclick="fun()">PROCEED TO PAY</button>
+        
+                </div>
+    
+            </form>
+    
+        </div>
+
+     
+    
+    </div>
+    <div id="bucketlow">
+      <hr>
+      <p>© MyGlamm</p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+<script src="./scripts/Payment.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

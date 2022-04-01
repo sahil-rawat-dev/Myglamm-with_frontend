@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+#container{
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+
+}
+#top{
+    text-align: center;
+    font-size: 30px;
+    font-weight:bolder ;
+}
+#bottom{
+    text-align: center;
+}
+input , select{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(232,240,254);
+    color: grey;
+    outline-color: gray;
+}
+input:hover{
+    border: 1px solid gray;
+}
+
+#four{
+    /* border: 1px solid red; */
+ 
+   width: 22%;
+   font-size: 18px;
+    display: flex;
+    justify-content: center;
+    margin-left: 80%;
+}
+#four>input{
+    margin-top: 21px;
+}
+button{
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+#five{
+    /* border: 1px solid greenyellow; */
+    width: 25%;
+    margin-left: 72%;
+}
+#one{
+    /* border: 1px solid red; */
+    display: flex;
+}
+#name , #email{
+    width: 40%;
+}
+#two{
+    display: flex;
+}
+select{
+    flex: 3;
+}
+#three{
+    display: flex;
+}
+#landmark{
+    width: 20%;
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+       <div id="top">
+           <p>Shipping Address</p>
+       </div>
+       <hr>
+    <form id="bottom">
+           
+        <div id="one">
+            
+          <input type="text" placeholder="Name" id="name" required><input type="number" placeholder="Number" id="number" required ><input type="Email" placeholder="Email" id="email" required>
+
+        </div>
+
+
+        <div id="two">
+
+          <select name="Home" id="select">
+             <option value="1">Office</option>
+             <option value="1">Home</option>
+             <option value="1">Other</option>
+
+             <input type="number" placeholder="FLAT NO. / HOUSE NO." id="number" required >
+             <input type="text" placeholder="Street name" id="street" required >
+             <input type="text" placeholder="Nighbourhood" id="number" required >
+
+          </select>
+
+        </div>
+
+        <div id="three">
+
+            <input type="number" placeholder="Pincode"  required >
+            <input type="text" placeholder="City"  required >
+            <input type="text" placeholder="State"  required >
+            <input type="text" placeholder="Landmark" required id="landmark" >
+
+        </div>
+
+        <div id="four">
+           <input type="checkbox"> <p> Mark as default</p>
+        </div>
+
+
+        <div id="five">
+
+            <button>Back</button>
+
+            <button>Continue</button>
+
+
+
+
+        </div>
+
+    </form>
+    </div>
+</body>
+</html>

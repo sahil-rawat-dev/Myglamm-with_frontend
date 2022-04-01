@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+
+    <div id="top">
+        <div id="navbar">
+            <div id="logo">
+                <img src="https://files.myglamm.com/site-images/original/MyGlamm-Logo_1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+<!-- ----------------------- -->
+  
+   <div id="main_div">
+        <div id="heading">
+            <p>Checkout</p>
+        </div>
+
+
+        <!-- ------------------------------ -->
+        <div id="subdiv">
+
+
+
+
+            <div id="container">
+                <div id="top">
+                    <p>Shipping Address</p>
+                </div>
+                <hr>
+             <form id="bottom">
+                    
+                 <div id="one">
+                     
+                   <input type="text" placeholder="Name" id="name" required><input type="number" placeholder="Number" id="number" required ><input type="Email" placeholder="Email" id="email" required>
+         
+                 </div>
+         
+         
+                 <div id="two">
+         
+                   <select name="Home" id="select">
+                      <option value="1">Office</option>
+                      <option value="1">Home</option>
+                      <option value="1">Other</option>
+         
+                      <input type="number" placeholder="FLAT NO. / HOUSE NO." id="number" required >
+                      <input type="text" placeholder="Street name" id="street" required >
+                      <input type="text" placeholder="Nighbourhood" id="number" required >
+         
+                   </select>
+         
+                 </div>
+         
+                 <div id="three">
+         
+                     <input type="number" placeholder="Pincode"  required >
+                     <input type="text" placeholder="City"  required >
+                     <input type="text" placeholder="State"  required >
+                     <input type="text" placeholder="Landmark" required id="landmark" >
+         
+                 </div>
+         
+                 <div id="four">
+                    <input type="checkbox"> <p> Mark as default</p>
+                 </div>
+         
+         
+                 <div id="five">
+
+                    <button onclick="window.location.href='./Cart/cart.html'">Back</button>
+                     <button>Continue</button>
+                 </div>
+         
+             </form>
+             </div>
+
+
+
+
+
+            <!-- ---------------------------------- -->
+            
+            <div id="bill">
+                <div>
+                    <div id="bill_heading">
+                        <p>Order Summary</p>
+                    </div>
+
+                    <!-- ------- -->
+                    <div>
+                        <div id="order_summary">
+                            <ul>
+                                <li>Total Amount</li>
+                                <li>Shipping Charges</li>
+                                <li>Discount</li>
+                                
+                            </ul>
+                            <ul id="amount">
+                                <li  id="tamount" >$00.00</li>
+                                <li id="shipcharge" style="text-decoration:line-through;" > ₹ 40</li>
+                                
+                                <li id="discount" > - - - - </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- ---------------- -->
+                    <p id="promocode">Apply Promo Code</p>
+
+
+                    <div id="promo_input">
+                        <input type="text" placeholder="Apply promocode here..." id="apply_promo">
+                        <button onclick="promo()">APPLY</button>
+                    </div>
+
+
+                    <div id="q01"></div>
+
+
+                    <div id="order_summary">
+                        <ul>
+                            <li id="payble_amount">Amount Payable</li>
+                            <!-- <li>You Saved</li>
+                            <li>You will earn</li> -->
+                        </ul>
+                        <ul id="final_amount">
+                            <li id="payamount">$00.00</li>
+                            <!-- <li id="yousaved">$00.00</li>
+                            <li id="non">₹ 15</li> -->
+                        </ul>
+                    </div>
+
+                    <div id="proceed_payment">
+                        <Button onclick="window.location.href = 'Payment.html'">Proceed to payment</Button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="low">
+            <hr>
+            <p><p>© MyGlamm</p></p>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
+
+<script src="./checkout.js">
+
+</script>
